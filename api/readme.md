@@ -17,10 +17,10 @@ npm init -y
 
 # Instale as dependências de desenvolvimento
 npm install --save-dev @types/cors @types/express
- @types/joi @types/sequelize nodemon ts-node-dev typescript
+ @types/joi @types/sequelize nodemon ts-node-dev typescript jest ts-jest @types/jest @types/swagger-ui-express
 
 # Instale as dependências de produção
-npm install cors dotenv express joi pg sequelize sequelize-cli
+npm install cors dotenv express joi pg sequelize sequelize-cli swagger-ui-express
 ```
 
 ## Configuração do tsconfig
@@ -41,7 +41,7 @@ npm install cors dotenv express joi pg sequelize sequelize-cli
 
 ```javascript
 "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev": "ts-node-dev src/server.ts",
     "build": "npx tsc",
     "clean": "tsc --build --clean"
